@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrecisionPainting</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* New styling for hero index overlay */
+      .hero-index-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(171, 171, 171, 0.399); /* greyish overlay */
+        z-index: 0;
+      }
+      .hero-content {
+        position: absolute;
+        top: 35%; /* changed from 50% to move the content up */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        text-align: center;
+      }
+      .hero-content h1 {
+        display: inline-block;
+        margin: 0 auto;
+        white-space: nowrap;  /* prevents the text from wrapping */
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Top green bar -->
+    <header class="top-header">
+      <div class="top-bar">
+        <!-- Empty div to keep phone on right -->
+        <div></div>
+        <!-- Phone number text with emoji on the right -->
+        <div class="header-contact">
+          <p>📞 303.800.7575</p>
+        </div>
+      </div>
+    </header>
+
+<!-- UPDATED NAV (after changes) -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <!-- Logo on the left -->
+    <div class="logo">
+      <img src="Assets/logo-topaz-upscale-2x.png" alt="PrecisionPaintingLOGO" />
+    </div>
+
+    <!-- Hamburger toggle now moved inside .nav-container, to the right of the logo -->
+    <div class="nav-toggle">
+      &#9776;  <!-- “☰” -->
+    </div>
+
+    <!-- Desktop nav-right (links + schedule button) -->
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="porfolio.html">Portfolio</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <!-- Keep same “Schedule an Estimate” button classes -->
+      <a href="contact.html" class="btn schedule-btn">Schedule an Estimate</a>
+    </div>
+  </div>
+
+  <!-- NEW dropdown‐style menu (hidden by default) -->
+  <div class="dropdown-menu">
+    <ul class="dropdown-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="porfolio.html">Portfolio</a></li>
+      <li><a href="process.html">Process</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+    <!-- Large hero section -->
+    <section class="hero">
+      <img class="hero-image" src="Assets/mainhouse-topaz-upscale-2x.jpg" alt="Hero Image" />
+      <div class="hero-index-overlay"></div>  <!-- new overlay element -->
+      <div class="hero-content">
+        <h1>Welcome to Precision Painting & Remodeling</h1>
+        <p style="font-size: 2.5rem; color: #fff; text-align: center; text-shadow: 2px 2px 5px rgba(0,0,0,0.7);">
+            Crafting Colorful, Lasting Transformations in Every Home        </p>
+        <a href="#" class="btn" style="display: inline-block; margin: 1.4rem auto 0;">
+          Get Quote
+        </a>
+      </div>
+    </section>
+
+    <!-- Trusted Contractor Section -->
+    <section class="trusted-contractor">
+      <div class="container">
+        <div class="image">
+          <img src="Assets/houseidea_paint-1-topaz-upscale-3.5x.jpg" alt="House!" />
+        </div>
+        <div class="content">
+          <h2>TRUSTED CHICAGO PAINTING AND REMODELING COMPANY</h2>
+          <p>
+            Precision Painting and Remodeling is your trusted
+             partner for interior and exterior painting and 
+             full-scale remodeling throughout Chicago, Indiana and the surrounding suburbs. With over a decade of hands-on experience, our skilled craftsmen deliver exceptional results on time and on budget, treating every home and business as if it were our own. Our commitment to excellence is reflected in hundreds of five-star reviews and in the monthly pro bono service projects we lead to improve the neighborhoods we serve. At Precision Painting and Remodeling, our goal is not just beautiful, long-lasting results, but a genuinely hassle-free experience that enriches our community and your home.
+          </p>
+          <a href="#" class="btn orange-btn">Get a Free Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section">
+      <div class="carousel-image">
+      <div class="brush-image">
+        <img src="Assets/brush.png" alt="Brush Icon">
+  
+      </div>
+    </div>
+      
+
+      <h2>Recent Painting and Remodeling Projects</h2>
+    
+      <div class="carousel-wrapper">
+
+      <button class="nav-arrow prev">&#10094;</button>
+
+
+        <div class="slideshow-container">        
+            <div class="slides">
+                <div class="slide">
+                  <img src="Assets/house2.jpeg" alt="Project 1" />
+                </div>
+                <div class="slide">
+                  <img src="Assets/house2.jpeg" alt="Project 2" />
+                </div>
+                <div class="slide">
+                  <img src="Assets/house2.jpeg" alt="Project 3" />
+                </div>
+                <div class="slide">
+                  <img src="Assets/house2.jpeg" alt="Project 4" />
+                </div>
+                <div class="slide">
+                  <img src="Assets/house2.jpeg" alt="Project 5" />
+                </div>
+                <div class="slide">
+                  <img src="Assets/house2.jpeg" alt="Project 6" />
+                </div>
+            </div>
+         </div>
+
+        <button class="nav-arrow next">&#10095;</button>
+      
+    </div>
+      
+      <a href="porfolio.html" class="view-projects-button">View All Projects</a>
+    </section>  <!-- End of Carousel Section -->
+
+    <!-- Added Experienced Banner Section -->
+    <section class="experiences-banner" style="background-color: #f5f5f5; margin: 0; padding: 0;">
+      <div class="experiences-icons-row">
+        <div class="experience-icon-block">
+          <img src="Assets/painter_purp.png" alt="Painter Icon" class="experience-icon-img" />
+          <div class="experience-icon-header">5+ Experienced Workers</div>
+        </div>
+        <div class="experience-icon-block">
+          <img src="Assets/experince_purp.png" alt="Experience Icon" class="experience-icon-img" />
+          <div class="experience-icon-header">20+ of Experience in the Industry</div>
+        </div>
+        <div class="experience-icon-block">
+          <img src="Assets/jobs_purp.png" alt="Jobs Icon" class="experience-icon-img" />
+          <div class="experience-icon-header">1000+ Commercial and Residentual Jobs</div>
+        </div>
+      </div>
+      <div class="banner-overlay"></div>
+      <img class="banner-image" src="Assets/64cb2d20c86c605724e6376b_francesca-tosolini-XcVm8mn7NUM-unsplash-topaz-upscale-2x.webp" alt="Experience Banner Image">
+    </section>
+
+    <div class="section-container">
+      <div class="header-with-lines">
+          <h2>Why Choose Precision Painting?</h2>
+      </div>
+      
+      <p class="section-paragraph"> We know there are countless painting and remodeling firms in Chicago, Indiana, and the surrounding suburbs—and earning your trust is our top priority. Over more than ten years, we’ve built a reputation for exceptional interior and exterior painting and full-scale remodeling by following a proven process rooted in clear communication, expert craftsmanship, and meticulous follow-through. Discover why Precision Painting and Remodeling stands apart as the partner you can count on.</p>
+      
+      <div class="box-container">
+          <div class="box">
+              <h3>Local Expertise & Reliability</h3>
+              <p> With team members both born and raised in the Chicago and Indiana area, we understand the unique requirements of every neighborhood—from historic brick façades in the city to modern homes in the suburbs. We arrive on time, respect your property, and adapt our approach to local weather, architectural styles, and HOA guidelines, so you never have to worry about surprises or delays.</p>
+
+          </div>
+          <div class="box">
+              <h3>Premium Materials & Craftsmanship</h3>
+              <p> We believe great results start with great products. That’s why we source only the highest-grade paints, stains, and finishes, and combine them with industry-leading techniques—whether we’re restoring worn-out siding, refinishing cabinetry, or transforming an entire living space. The result is a flawless, long-lasting finish that looks stunning and stands up beautifully to everyday wear.</p>
+
+          </div>
+          <div class="box">
+              <h3>Personalized, Transparent Service</h3>
+              <p>Your project is as individual as you are. From the first consultation through color selection, scheduling, and the final walkthrough, we keep you fully informed and involved. You’ll never wonder where we are in the process—our Customer Success Managers provide regular updates, answer every question promptly, and adjust plans on the fly to accommodate your needs and budget.</p>
+
+           </div>
+           <div class="box">
+              <h3>Community Commitment & Impact</h3>
+              <p>We believe a thriving community is our greatest measure of success. Every month, we organize and sponsor pro bono service projects—freshening up schools, community centers, and local nonprofits—to give back to the neighborhoods that support us. When you choose Precision, you’re not just investing in your home or business; you’re investing in a stronger, more vibrant community.</p>
+           </div>   
+
+      </div>
+  </div>
+  
+  <!-- Trusted banner section (copied from services.html) -->
+  <section class="trusted-banner">
+    <div class="trusted-banner-overlay"></div>
+    <img class="trusted-banner-image" src="Assets/ppp-portfolio-residential-exterior-ProjectPainting_ExteriorLIHouse1-topaz-upscale-4x.jpg" alt="Trusted Banner Image" />
+    <div class="trusted-banner-content">
+      <div class="trusted-banner-text">
+        <h2>Trusted by Hundreds Across Chicago & Indiana</h2>
+        <p>Homeowners and businesses alike depend
+           on Precision Painting and Remodeling for
+            unmatched quality, reliability, and professionalism.</p>
+      </div>
+      <div class="trusted-banner-button">
+        <a href="contact.html" class="btn orange-btn">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bottom-info">
+    <div class="bottom-container">
+      <div class="logo-section">
+        <img src="Assets/logo-topaz-upscale-2x.png" alt="Company-Logo">  
+      </div>
+      <div class="address-section">
+        <h1>CONTACT US</h1>
+        <div class="address-text">
+          <p>1616 Federal BLVD, Denver,</p>
+          <p>Colorado</p>
+          <p> </p>
+          <p>service@paintdenver.com</p>
+          <p>303.800.7575</p>
+        </div>
+      </div>
+      <div class="brand-promise-section">
+        <h1>BRAND PROMISE</h1>
+        <p>We are committed to professionalism, integrity,
+          and sustainability in the painting industry. 
+          Living up to this commitment means that we follow 
+          through on our promises and treat every customer 
+          like they are our only customer, minimize waste
+          where possible, and contribute to our community 
+          through volunteer projects and donations.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Modal Overlay for Image Showcase: Project 1 -->
+<div id="imageModal1" class="modal">
+  <span class="modal-close" data-modal="imageModal1">&times;</span>
+  <div class="modal-content">
+    <h2>Project 1 Showcase</h2>
+    <div class="modal-grid">
+      <!-- Replace with images for Project 1 -->
+      <img src="Assets/house2.jpeg" alt="Project 1-1" />
+      <img src="Assets/house2.jpeg" alt="Project 1-2" />
+      <img src="Assets/house2.jpeg" alt="Project 1-3" />
+      <img src="Assets/house2.jpeg" alt="Project 1-4" />
+      <img src="Assets/house2.jpeg" alt="Project 1-5" />
+      <img src="Assets/house2.jpeg" alt="Project 1-6" />
+      <!-- removed Project 1-7 and Project 1-8 -->
+    </div>
+  </div>
+</div>
+
+<!-- Modal Overlay for Image Showcase: Project 2 -->
+<div id="imageModal2" class="modal">
+  <span class="modal-close" data-modal="imageModal2">&times;</span>
+  <div class="modal-content">
+    <h2>Project 2 Showcase</h2>
+    <div class="modal-grid">
+      <!-- Replace with images for Project 2 -->
+      <img src="Assets/house2.jpeg" alt="Project 2-1" />
+      <img src="Assets/house2.jpeg" alt="Project 2-2" />
+      <img src="Assets/house2.jpeg" alt="Project 2-3" />
+      <img src="Assets/house2.jpeg" alt="Project 2-4" />
+      <img src="Assets/house2.jpeg" alt="Project 2-5" />
+      <img src="Assets/house2.jpeg" alt="Project 2-6" />
+      <!-- removed Project 2-7 and Project 2-8 -->
+    </div>
+  </div>
+</div>
+
+<!-- Modal Overlay for Image Showcase: Project 3 -->
+<div id="imageModal3" class="modal">
+  <span class="modal-close" data-modal="imageModal3">&times;</span>
+  <div class="modal-content">
+    <h2>Project 3 Showcase</h2>
+    <div class="modal-grid">
+      <!-- Replace with images for Project 3 -->
+      <img src="Assets/house2.jpeg" alt="Project 3-1" />
+      <img src="Assets/house2.jpeg" alt="Project 3-2" />
+      <img src="Assets/house2.jpeg" alt="Project 3-3" />
+      <img src="Assets/house2.jpeg" alt="Project 3-4" />
+      <img src="Assets/house2.jpeg" alt="Project 3-5" />
+      <img src="Assets/house2.jpeg" alt="Project 3-6" />
+      <!-- removed Project 3-7 and Project 3-8 -->
+    </div>
+  </div>
+</div>
+
+<!-- Modal Overlay for Image Showcase: Project 4 -->
+<div id="imageModal4" class="modal">
+  <span class="modal-close" data-modal="imageModal4">&times;</span>
+  <div class="modal-content">
+    <h2>Project 4 Showcase</h2>
+    <div class="modal-grid">
+      <!-- Replace with images for Project 4 -->
+      <img src="Assets/house2.jpeg" alt="Project 4-1" />
+      <img src="Assets/house2.jpeg" alt="Project 4-2" />
+      <img src="Assets/house2.jpeg" alt="Project 4-3" />
+      <img src="Assets/house2.jpeg" alt="Project 4-4" />
+      <img src="Assets/house2.jpeg" alt="Project 4-5" />
+      <img src="Assets/house2.jpeg" alt="Project 4-6" />
+      <!-- removed Project 4-7 and Project 4-8 -->
+    </div>
+  </div>
+</div>
+
+<!-- Modal Overlay for Image Showcase: Project 5 -->
+<div id="imageModal5" class="modal">
+  <span class="modal-close" data-modal="imageModal5">&times;</span>
+  <div class="modal-content">
+    <h2>Project 5 Showcase</h2>
+    <div class="modal-grid">
+      <!-- Replace with images for Project 5 -->
+      <img src="Assets/house2.jpeg" alt="Project 5-1" />
+      <img src="Assets/house2.jpeg" alt="Project 5-2" />
+      <img src="Assets/house2.jpeg" alt="Project 5-3" />
+      <img src="Assets/house2.jpeg" alt="Project 5-4" />
+      <img src="Assets/house2.jpeg" alt="Project 5-5" />
+      <img src="Assets/house2.jpeg" alt="Project 5-6" />
+      <!-- removed Project 5-7 and Project 5-8 -->
+    </div>
+  </div>
+</div>
+
+<!-- Modal Overlay for Image Showcase: Project 6 -->
+<div id="imageModal6" class="modal">
+  <span class="modal-close" data-modal="imageModal6">&times;</span>
+  <div class="modal-content">
+    <h2>Project 6 Showcase</h2>
+    <div class="modal-grid">
+      <!-- Replace with images for Project 6 -->
+      <img src="Assets/house2.jpeg" alt="Project 6-1" />
+      <img src="Assets/house2.jpeg" alt="Project 6-2" />
+      <img src="Assets/house2.jpeg" alt="Project 6-3" />
+      <img src="Assets/house2.jpeg" alt="Project 6-4" />
+      <img src="Assets/house2.jpeg" alt="Project 6-5" />
+      <img src="Assets/house2.jpeg" alt="Project 6-6" />
+      <!-- removed Project 6-7 and Project 6-8 -->
+    </div>
+  </div>
+</div>
+</body>
+
+
+  <script src="script.js"></script>
+</html>

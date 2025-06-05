@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PrecisionPainting - About Us</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- You can add additional styles below or in style.css -->
+  <style>
+    /* About content section */
+    .about-content-section {
+      background-color: #fff;
+      padding: 3rem 2rem;
+    }
+    .about-container {
+      display: flex;
+      align-items: flex-start; /* changed from center to flex-start */
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .about-image {
+      margin-top: 8rem; /* added to align the image with the paragraph */
+    }
+    .about-image img {
+      width: 100%;
+      max-width: 700px; /* updated from 500px to 600px for a bigger image */
+      border-radius: 5px;
+      object-fit: cover;
+    }
+    .about-text {
+      max-width: 700px;
+    }
+    .about-text h2 {
+      font-size: 2.5rem;
+      color: #040460;
+      margin-bottom: 1rem;
+    }
+    .about-text p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top green bar (reuse from your other pages) -->
+  <header class="top-header">
+    <div class="top-bar">
+      <div></div>
+      <div class="header-contact">
+        <p>📞 303.800.7575</p>
+      </div>
+    </div>
+  </header>
+<!-- UPDATED NAV (after changes) -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <!-- Logo on the left -->
+    <div class="logo">
+      <a href="index.html"></a>
+      <img src="Assets/logo-topaz-upscale-2x.png" alt="PrecisionPaintingLOGO" />
+    </div>
+
+    <!-- Hamburger toggle now moved inside .nav-container, to the right of the logo -->
+    <div class="nav-toggle">
+      &#9776;  <!-- “☰” -->
+    </div>
+
+    <!-- Desktop nav-right (links + schedule button) -->
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="porfolio.html">Portfolio</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="#" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <!-- Keep same “Schedule an Estimate” button classes -->
+      <a href="contact.html" class="btn schedule-btn">Schedule an Estimate</a>
+    </div>
+  </div>
+
+  <!-- NEW dropdown‐style menu (hidden by default) -->
+  <div class="dropdown-menu">
+    <ul class="dropdown-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="porfolio.html">Portfolio</a></li>
+      <li><a href="process.html">Process</a></li>
+      <li><a href="#" class="active">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Hero section -->
+  <section class="hero hero-services">
+    <div class="hero-overlay"></div>
+    <img class="hero-image" src="Assets/step2-topaz-upscale-3.8x.jpg" alt="Hero Image" />
+    <h1>About Us</h1>
+  </section>
+
+  <!-- About Content Section (White background with image left and text right) -->
+  <section class="about-content-section">
+    <div class="about-container">
+      <div class="about-image">
+        <!-- Replace with an appropriate about image -->
+        <img src="Assets/istockphoto-155369538-612x612-topaz-upscale-2x.webp" alt="About our company">
+      </div>
+      <div class="about-text">
+        <h2 style="font-size: 3rem; color: #040460;">Our Story</h2>
+        <p style="font-size: 1.5rem; color: #555; line-height: 1.6;">
+   Three decades ago, our founder set out door-to-door across Chicago with a single brush and a passion for perfection. Today, Precision Painting and Remodeling is a tight-knit team of professionals with 30+ years of experience in painting, carpentry, and full-scale remodels—serving Chicago, Indiana, and the surrounding suburbs. Every project, from historic brick restorations to kitchen makeovers and school beautification, is our chance to uplift the communities we call home with impeccable results and genuine neighborly care. </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inserted Why Choose Precision Painting? section -->
+  <div class="section-container">
+  <div class="header-with-lines">
+      <h2>Why Choose Precision Painting?</h2>
+  </div>
+  <p class="section-paragraph">
+    We know there are countless painting and remodeling firms in Chicago, Indiana, and the surrounding suburbs—and earning your trust is our top priority. Over more than ten years, we’ve built a reputation for exceptional interior and exterior painting and full-scale remodeling by following a proven process rooted in clear communication, expert craftsmanship, and meticulous follow-through. Discover why Precision Painting and Remodeling stands apart as the partner you can count on.
+  </p>
+  <div class="box-container">
+      <div class="box">
+          <h3>Local Expertise & Reliability</h3>
+          <p>With team members both born and raised in the Chicago and Indiana area, we understand the unique requirements of every neighborhood—from historic brick façades in the city to modern homes in the suburbs. We arrive on time, respect your property, and adapt our approach to local weather, architectural styles, and HOA guidelines, so you never have to worry about surprises or delays.</p>
+      </div>
+      <div class="box">
+          <h3>Premium Materials & Craftsmanship</h3>
+          <p>We believe great results start with great products. That’s why we source only the highest-grade paints, stains, and finishes, combining them with industry-leading techniques—whether we’re restoring worn-out siding, refinishing cabinetry, or transforming an entire living space. The result is a flawless, long-lasting finish that looks stunning and stands up beautifully to everyday wear.</p>
+      </div>
+      <div class="box">
+          <h3>Personalized, Transparent Service</h3>
+          <p>Your project is as individual as you are. From the first consultation through color selection, scheduling, and the final walkthrough, we keep you fully informed and involved. You’ll never wonder where we are in the process—our Customer Success Managers provide regular updates, answer every question promptly, and adjust plans on the fly to accommodate your needs and budget.</p>
+       </div>
+       <div class="box">
+          <h3>Community Commitment & Impact</h3>
+          <p>We believe a thriving community is our greatest measure of success. Every month, we organize and sponsor pro bono service projects—freshening up schools, community centers, and local nonprofits—to give back to the neighborhoods that support us. When you choose Precision, you’re not just investing in your home or business; you’re investing in a stronger, more vibrant community.</p>
+       </div>   
+  </div>
+</div>
+  <!-- End of inserted section -->
+
+  <!-- Trusted banner section -->
+  <section class="trusted-banner">
+    <div class="trusted-banner-overlay"></div>
+    <img class="trusted-banner-image" src="Assets/ppp-portfolio-residential-exterior-ProjectPainting_ExteriorLIHouse1-topaz-upscale-4x.jpg" alt="Trusted Banner Image" />
+    <div class="trusted-banner-content">
+      <div class="trusted-banner-text">
+        <h2>Trusted by Hundreds Across Chicago & Indiana</h2>
+        <p>Homeowners and businesses alike depend on Precision Painting and Remodeling for unmatched quality, reliability, and professionalism.</p>
+      </div>
+      <div class="trusted-banner-button">
+        <a href="contact.html" class="btn orange-btn">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom info / footer section -->
+  <section class="bottom-info">
+    <div class="bottom-container">
+      <div class="logo-section">
+        <img src="Assets/logo.png" alt="Company-Logo">
+      </div>
+      <div class="address-section">
+        <h1>CONTACT US</h1>
+        <div class="address-text">
+          <p>1616 Federal BLVD, Denver,</p>
+          <p>Colorado</p>
+          <p>service@paintdenver.com</p>
+          <p>303.800.7575</p>
+        </div>
+      </div>
+      <div class="brand-promise-section">
+        <h1>BRAND PROMISE</h1>
+        <p>
+          We are committed to professionalism, integrity, and sustainability in the painting industry. 
+          Our promise is to treat every customer like they are our only customer while delivering exceptional results.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

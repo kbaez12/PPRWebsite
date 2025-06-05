@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrecisionPainting</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- Top green bar -->
+    <header class="top-header">
+      <div class="top-bar">
+        <!-- Empty div to keep phone on right -->
+        <div></div>
+        <!-- Phone number text with emoji on the right -->
+        <div class="header-contact">
+          <p>📞 303.800.7575</p>
+        </div>
+      </div>
+    </header>
+
+<!-- UPDATED NAV (after changes) -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <!-- Logo on the left -->
+    <div class="logo">
+      <a href="index.html"></a>
+      <img src="Assets/logo-topaz-upscale-2x.png" alt="PrecisionPaintingLOGO" />
+    </div>
+
+    <!-- Hamburger toggle now moved inside .nav-container, to the right of the logo -->
+    <div class="nav-toggle">
+      &#9776;  <!-- “☰” -->
+    </div>
+
+    <!-- Desktop nav-right (links + schedule button) -->
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="porfolio.html">Portfolio</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <!-- Keep same “Schedule an Estimate” button classes -->
+      <a href="contact.html" class="btn schedule-btn">Schedule an Estimate</a>
+    </div>
+  </div>
+
+  <!-- NEW dropdown‐style menu (hidden by default) -->
+  <div class="dropdown-menu">
+    <ul class="dropdown-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="porfolio.html">Portfolio</a></li>
+      <li><a href="process.html">Process</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+    <!-- Hero section -->
+    <section class="hero hero-services">
+      <div class="hero-overlay"></div>
+      <img class="hero-image" src="Assets/Proper-Storage-Techniques-for-Unused-House-Paint-topaz-upscale-4x1.jpg" alt="Hero Image" />
+      <h1>Services</h1>
+    </section>
+
+    <!-- Services section -->
+    <section class="services-overview">
+      <h1 style="font-size: 3rem; color: #040460; text-align: center; margin: 0 auto;">
+        Our Painting Services
+      </h1>
+      <h2 style="font-size: 1.8rem; color: #666; max-width: 900px; margin: 0 auto; text-align: center;">
+        Our painting services include interior painting, exterior painting, custom color matching, new construction painting, and more.
+      </h2>
+
+      <div class="services-grid">
+        <!-- Box 1 -->
+        <div class="service-box">
+          <img src="Assets/interior painting.jpg" alt="Interior Painting" />
+          <h3>Interior Painting</h3>
+          <p>Whether you need a fresh coat of paint for a single room or want to update the entire look of your home, we can help. We have the skills and knowledge to get the job done right, on time, and within your budget.</p>
+          <button>Contact Us</button>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="service-box">
+          <img src="Assets/exteriorpainting.avif" alt="Exterior Painting" />
+          <h3>Exterior Painting</h3>
+          <p>Our team of experienced exterior painters can transform the look of your home quickly and easily. We use only the highest-quality paints and materials to ensure a long-lasting finish that will withstand the elements.</p>
+          <button>Contact Us</button>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="service-box">
+          <img src="Assets/drywall.jpg" alt="Drywall Installation & Repair" />
+          <h3>Drywall Installation & Repair</h3>
+          <p>We provide professional drywall installation and repair services. We can help with installation of new drywall or repairs of the existing drywall and plaster.</p>
+          <button>Contact Us
+          </button>
+        </div>
+
+        <!-- Box 4 -->
+        <div class="service-box">
+          <img src="Assets/remodeling.jpg" alt="Remodeling" />
+          <h3>Remodeling</h3>
+          <p>From light renovations to major overhauls, we can upgrade your bathrooms, kitchens, or any space in your home.</p>
+          <button>Contact Us</button>
+        </div>
+
+        <!-- Box 5 -->
+        <div class="service-box">
+          <img src="Assets/Oil-Priming-Kitchen-Island.jpg" alt="Cabinet Painting" />
+          <h3>Cabinet Painting</h3>
+          <p>Enhance wood floors, cabinets, or trim with our custom staining and finishing solutions for a truly elevated look.</p>
+          <button>Contact Us</button>
+        </div>
+
+        <!-- Box 6 -->
+        <div class="service-box">
+          <img src="Assets/remod.jpg" alt="Floor Installation" />
+          <h3>Floor Installation</h3>
+          <p>We provide professional floor installation services to enhance the beauty and functionality of your home.</p>
+          <button>Contact Us</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional image section -->
+  <section class="trusted-banner">
+    <div class="trusted-banner-overlay"></div>
+    <img class="trusted-banner-image" src="Assets/ppp-portfolio-residential-exterior-ProjectPainting_ExteriorLIHouse1-topaz-upscale-4x.jpg" alt="Trusted Banner Image" />
+    <div class="trusted-banner-content">
+      <div class="trusted-banner-text">
+        <h2>Trusted by Hundreds Across Chicago & Indiana</h2>
+        <p>Homeowners and businesses alike depend on Precision Painting and Remodeling for unmatched quality, reliability, and professionalism.</p>
+      </div>
+      <div class="trusted-banner-button">
+        <a href="contact.html" class="btn orange-btn">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Reuse bottom info / footer -->
+    <section class="bottom-info">
+      <div class="bottom-container">
+      
+      <div class="logo-section">
+          <img src="Assets/logo.png" alt="Company-Logo">  
+      </div>
+
+
+
+      <div class="address-section">
+       <h1>CONTACT US</h1>
+       <div class="address-text">
+        <p>1616 Federal BLVD, Denver,</p>
+        <p>Colorado</p>
+        <p>service@paintdenver.com</p>
+        <p>303.800.7575</p>
+      </div>
+      </div>
+    
+      <div class="brand-promise-section">
+        <h1>BRAND PROMISE</h1>
+        <p>We are committed to professionalism, integrity,
+          and sustainability in the painting industry. 
+          Living up to this commitment means that we follow 
+          through on our promises and treat every customer 
+          like they are our only customer, minimize waste
+          where possible, and contribute to our community 
+          through volunteer projects and donations.</p>
+    
+      </div>
+    </div>
+  </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
