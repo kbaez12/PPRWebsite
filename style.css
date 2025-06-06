@@ -1563,7 +1563,7 @@ button[type="submit"]:hover {
     align-items: center;
     gap: 1.5rem;
     margin-bottom: 2rem;
-  
+    color: #7d0064;
   
   }
 
@@ -1571,7 +1571,7 @@ button[type="submit"]:hover {
     font-size: 1rem;  /* ↑ Reduce email-box text size so it no longer spills out */
   }
 
-    .contact-info-boxes .info-box {
+  .contact-info-boxes .info-box {
     width: 100%;
     max-width: 500px;
     height: 100%;
