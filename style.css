@@ -1056,7 +1056,6 @@ button[type="submit"]:hover {
 .experience-icon-img {
   width: 90px;
   height: 90px;
-  margin-bottom: 10px;
   display: block;
 }
 .experience-icon-header {
@@ -1134,8 +1133,26 @@ body.scrolled .main-nav {
 /*==================================================
   10) RESPONSIVE OVERRIDES (≤1024px)
 ==================================================*/
+/* ───────────────────────────────────────────────────────────────────────────
+   10) RESPONSIVE OVERRIDES (≤1024px)
+   ─────────────────────────────────────────────────────────────────────────── */
+/* ==================================================
+   10) RESPONSIVE OVERRIDES (≤1024px)
+   ================================================== */
+/* ==================================================
+   10) RESPONSIVE OVERRIDES (≤1024px)
+   ================================================== */
+/* ==================================================
+   10) RESPONSIVE OVERRIDES (≤1024px)
+   ================================================== */
+/* ==================================================
+   10) RESPONSIVE OVERRIDES (≤1024px)
+   ================================================== */
 @media (max-width: 1024px) {
-  /* NAVIGATION: hide desktop links, show hamburger */
+  /* ─────────────────────────────────────────────────────────────────────────
+     NAVIGATION: hide desktop links, show hamburger
+     (unchanged from before)
+     ───────────────────────────────────────────────────────────────────────── */
   .nav-container {
     flex-direction: row;
     align-items: center;
@@ -1154,13 +1171,14 @@ body.scrolled .main-nav {
   .dropdown-menu.open {
     display: flex;
   }
-
-  /* LOGO */
   .logo img {
     margin-left: 1rem !important;
   }
 
-  /* HERO */
+  /* ─────────────────────────────────────────────────────────────────────────
+     HERO (shrink text, etc.)
+     (unchanged from before)
+     ───────────────────────────────────────────────────────────────────────── */
   .hero {
     height: 60vh;
     padding: 0;
@@ -1193,14 +1211,42 @@ body.scrolled .main-nav {
     text-align: center;
   }
 
-  /* TRUSTED CONTRACTOR & BANNER */
+  /* ─────────────────────────────────────────────────────────────────────────
+     TRUSTED CONTRACTOR & BANNER
+     ───────────────────────────────────────────────────────────────────────── */
   .trusted-contractor .container,
   .trusted-banner-content {
     flex-direction: column !important;
-    text-align: left;
+    text-align: center !important;        /* center header + paragraph */
     padding: 2rem 1rem !important;
     max-width: 100% !important;
     width: 100% !important;
+  }
+  .trusted-contractor .content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0 !important;           /* remove desktop padding */
+    padding-right: 0 !important;
+    color: #333;
+  }
+  .trusted-contractor .content h2 {
+    /* mobile: “TRUSTED CHICAGO PAINTING AND REMODELING COMPANY” */
+    font-size: 2.4rem !important;          /* mobile header size */
+    font-weight: bold !important;
+    padding-bottom: 10px;                  /* small gap under heading */
+    text-align: center !important;
+  }
+  .trusted-contractor .content p {
+    /* mobile: paragraph under that header */
+    font-size: 1.2rem !important;            /* mobile paragraph size */
+    word-break: break-word;
+    margin: 0 auto 1rem;
+    max-width: 100%;
+    text-align: center !important;
+    padding: 0;
   }
   .trusted-contractor .image img {
     width: 100% !important;
@@ -1209,84 +1255,41 @@ body.scrolled .main-nav {
   }
   .trusted-banner-text {
     margin: 0 0 1rem;
+    text-align: center;                    /* center “Trusted by Hundreds…” header */
+  }
+
+  .trusted-banner {
+    height: 75vh;
+  }
+
+  .trusted-banner-text h2 {
+    /* mobile: “Trusted by Hundreds Across Chicago & Indiana” */
+    font-size: 2.4rem !important;          /* mobile header size */
+    font-weight: bold !important;
+    text-align: center !important;
+  }
+  .trusted-banner-text p {
+    /* mobile: paragraph under “Trusted by Hundreds…” */
+    font-size: 1rem !important;            /* mobile paragraph size */
+    text-align: center !important;
   }
   .trusted-banner-button a {
     width: auto;
   }
 
-  /* CAROUSEL & GRID LAYOUTS */
- 
+  /* ─────────────────────────────────────────────────────────────────────────
+     CAROUSEL & GRID LAYOUTS
+     (unchanged from before)
+     ───────────────────────────────────────────────────────────────────────── */
   .slides {
-  gap: 0;           /* no gap so one slide fully fills the viewport */
-}
-.slide {
-  min-width: 100%;  /* each slide is exactly 100% of the container’s width */
-}
-
+    gap: 0;           /* no gap so one slide fully fills the viewport */
+  }
+  .slide {
+    min-width: 100%;  /* each slide is exactly 100% of container’s width */
+  }
   .box-container,
-  .grid-container,
-  .services-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* EXPERIENCES BANNER: stack icons vertically */
-    .experiences-banner {
-    height: auto;
-    padding: 2rem 0;
-    background-image: url('Assets/64cb2d20c86c605724e6376b_francesca-tosolini-XcVm8mn7NUM-unsplash-topaz-upscale-1.7x.webp');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-  .experiences-banner .banner-image {
-    display: none;
-  }
-  .experiences-banner .banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-  }
-  .experiences-icons-row {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0rem;      /* smaller vertical gap between each icon block */
-    padding-top: 1rem;
-  }
-  .experience-icon-block {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    width: 90% !important;
-    max-width: 300px !important;
-    margin: 0 auto;
-    gap: 0.5rem;       /* keeps a little space between icon and text */
-  }
-  .experience-icon-img {
-    width: 80px !important;   /* increased from 60px to 80px for larger icons */
-    height: auto !important;
-    margin-right: 1rem !important;
-  }
-  .experience-icon-header {
-    font-size: 1.2rem !important;
-    text-align: left !important;
-    color: #fff !important;
-  }
-
-  /* BOXES */
-  .box-container,
-  .portfolio-grid .grid-container {
+  .portfolio-grid .grid-container,
+  .services-overview .services-grid {
     grid-template-columns: 1fr !important;
   }
   .service-box {
@@ -1294,35 +1297,117 @@ body.scrolled .main-nav {
     max-width: none;
   }
 
-  /* INFO BOXES & FORMS */
-  .info-boxes {
-    flex-direction: column;
-    gap: 1rem;
+  /* ─────────────────────────────────────────────────────────────────────────
+     RECENT PROJECTS SECTION HEADER
+     “Recent Painting and Remodeling Projects”
+     ───────────────────────────────────────────────────────────────────────── */
+  .carousel-section h2 {
+    font-size: 2.4rem !important;   /* mobile header size */
+    font-weight: bold !important;   /* make it bold on mobile */
+    text-align: center !important;  /* center it on mobile */
+    margin: 1.5rem 0;               /* space above/below */
   }
-  .interest-form .form-row {
-    flex-direction: column;
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     EXPERIENCES BANNER (stack icons vertically) 
+     ───────────────────────────────────────────────────────────────────────── */
+  .experiences-banner {
+    height: auto !important;
+    padding: 1rem 0 !important;
+    background-image: url('Assets/64cb2d20c86c605724e6376b_francesca-tosolini-XcVm8mn7NUM-unsplash-topaz-upscale-1.7x.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
   }
+  .experiences-banner .banner-image {
+    display: none !important;
+  }
+  .experiences-banner .banner-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    z-index: 1 !important;
+  }
+  .experiences-icons-row {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    z-index: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.5rem !important;       /* small vertical gap between icon rows */
+    padding-top: 1rem !important;
+  }
+  .experience-icon-block {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 90% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    gap: 0.1rem !important;     /* gap between icon and text */
+  }
+  .experience-icon-img {
+    width: 100px !important;   /* make the icon larger on mobile */
+    height: auto !important;
+    margin: 0 !important;      /* remove any old bottom margin */
+    margin-right: 1rem !important;
+  }
+  .experience-icon-header {
+    /* mobile: text next to icons (“5+ Experienced Workers”, etc.) */
+    font-size: 1.5rem !important;    /* increase from 1.2rem → 1.4rem */
+    font-weight: 600 !important;     /* semi-bold on mobile for legibility */
+    text-align: left !important;
+    color: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     WHY CHOOSE SECTION
+     “Why Choose Precision Painting?” + paragraph
+     ───────────────────────────────────────────────────────────────────────── */
+  .section-container .header-with-lines h2 {
+    /* mobile: “Why Choose Precision Painting?” */
+    font-size: 2.6rem !important;   /* mobile header size */
+    text-align: center !important;  /* center on mobile */
+    margin: 1.5rem 0;               /* spacing above/below */
+  }
+  .section-container .section-paragraph {
+    /* mobile: paragraph under “Why Choose Precision Painting?” */
+    font-size: 1.2rem !important; 
+    font-weight: 500;    /* mobile paragraph size */
+    text-align: center !important;  /* center on mobile */
+    margin: 0 auto 1.5rem;          /* spacing below */
+    max-width: 90%;                 /* keep lines from stretching too wide */
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     BOXES, INFO SECTIONS, FOOTER (full-width / centered)
+     (unchanged from before)
+     ───────────────────────────────────────────────────────────────────────── */
   .contact-info-boxes {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
     margin-bottom: 2rem;
   }
-  .contact-info-boxes .info-text p {
-    font-size: 1rem;
-  }
   .contact-info-boxes .info-box {
     width: 100%;
     max-width: 500px;
     max-height: 300px;
   }
-
-  /* STEPS / PROCESS SECTION */
   .steps-section {
     flex-direction: column;
     gap: 2rem;
   }
-
   .dropdown-menu {
     width: 100%;
     left: 0;
@@ -1337,13 +1422,11 @@ body.scrolled .main-nav {
     width: 100%;
   }
   .dropdown-links a {
-    display: block;      /* already set, but reiterate to ensure full width */
+    display: block;
     width: 100%;
     box-sizing: border-box;
-    padding: 10px 15px;  /* you can adjust this padding as needed */
+    padding: 10px 15px;
   }
-
-  /* BOTTOM / FOOTER COLUMNS */
   .bottom-container {
     flex-direction: column;
     align-items: center;
@@ -1362,11 +1445,22 @@ body.scrolled .main-nav {
   .brand-promise-section p {
     text-align: center;
   }
+
+.bottom-container .logo-section {
+  margin: 0 auto !important;       /* remove desktop margin-right and center container */
+  text-align: center !important;   /* ensure any inline children without explicit display: block also center */
+  max-width: none !important;      /* allow full-width behavior if needed */
 }
 
-/*==================================================
-  11) EXTRA MOBILE OVERRIDES (≤768px)
-==================================================*/
+.bottom-container .logo-section img {
+  display: block !important;       /* treat <img> as a block‐level element */
+  margin: 0 auto !important;       /* horizontally center the logo itself */
+}
+}
+
+/* ==================================================
+   11) EXTRA MOBILE OVERRIDES (≤768px)
+   ================================================== */
 @media (max-width: 768px) {
   .box {
     width: 100%;
