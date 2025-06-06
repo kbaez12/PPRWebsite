@@ -1509,6 +1509,7 @@ button[type="submit"]:hover {
     display: block;
     cursor: pointer;
     margin-right: 1rem;
+    font-style: 3rem;
     /* remove margin-left:auto so it doesn’t get stuck in the middle */
   }
  
@@ -1536,6 +1537,9 @@ button[type="submit"]:hover {
     flex-direction: column !important;
     text-align: center;
     padding: 2rem 1rem !important;
+    max-width: 100% !important; /* ensure full width */
+    width: 100% !important; /* ensure full width */
+
   }
   .trusted-banner-text { margin: 0 0 1rem; }
   .trusted-banner-button a { width: auto; }
@@ -1552,7 +1556,27 @@ button[type="submit"]:hover {
   /* INFO BOXES & FORMS */
   .info-boxes { flex-direction: column; gap: 1rem; }
   .interest-form .form-row { flex-direction: column; }
-  .contact-info-boxes { flex-direction: column; }
+  .contact-info-boxes { 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  
+  
+  }
+
+  .contact-info-boxes .info-text p {
+    font-size: 1rem;  /* ↑ Reduce email-box text size so it no longer spills out */
+  }
+
+    .contact-info-boxes .info-box {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    max-height: 300px;
+  }
 
   /* STEPS / PROCESS SECTION */
   .steps-section { flex-direction: column; gap: 2rem; }
