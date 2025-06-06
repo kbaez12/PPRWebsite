@@ -16,40 +16,68 @@ window.addEventListener('scroll', function () {
   }
 });
 
-// Wait for DOM ready before wiring carousel + modals
+// Replace your existing carousel-related code with the following.
+// This handles both desktop (3 slides visible) and mobile (1 slide visible)
+// without affecting your current mobile logic.
+
 document.addEventListener("DOMContentLoaded", function() {
-  // ——— Carousel setup (only if present) ———
-  const slides     = document.querySelector('.slides');
-  const slideItems = document.querySelectorAll('.slide');
-  const prevBtn    = document.querySelector('.prev');
-  const nextBtn    = document.querySelector('.next');
+  const slidesContainer = document.querySelector('.slides');
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const prevBtn = document.querySelector('.nav-arrow.prev');
+  const nextBtn = document.querySelector('.nav-arrow.next');
   let currentIndex = 0;
 
-  if (slides && prevBtn && nextBtn) {
-    // Next arrow
-    nextBtn.addEventListener('click', () => {
-      if (currentIndex < slideItems.length - 3) {
-        currentIndex++;
-        slides.style.transform = `translateX(-${currentIndex * (100 / 3)}%)`;
-      }
-    });
+  function updateCarousel() {
+    // Make sure we have slides and a container
+    if (!slidesContainer || slides.length === 0) return;
 
-    // Prev arrow
+    // Measure one “step”: slide width + gap
+    const firstSlide = slides[0];
+    const firstRect = firstSlide.getBoundingClientRect();
+    const slideWidth = firstRect.width;
+
+    // Read the gap from computed styles of .slides
+    const style = window.getComputedStyle(slidesContainer);
+    const gap = parseInt(style.getPropertyValue('gap')) || 0;
+    const step = slideWidth + gap;
+
+    // Determine how many slides should be visible
+    const isMobile = window.innerWidth <= 1024;
+    const visibleCount = isMobile ? 1 : 3;
+
+    // Compute the maximum index (so we never scroll past the last “page”)
+    const maxIndex = slides.length - visibleCount;
+
+    // Clamp currentIndex between 0 and maxIndex
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+    // Apply translateX
+    slidesContainer.style.transform = `translateX(-${currentIndex * step}px)`;
+
+    // Optionally disable arrows at the ends
+    if (prevBtn) prevBtn.disabled = (currentIndex === 0);
+    if (nextBtn) nextBtn.disabled = (currentIndex === maxIndex);
+  }
+
+  if (prevBtn && nextBtn) {
     prevBtn.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        slides.style.transform = `translateX(-${currentIndex * (100 / 2)}%)`;
-      }
+      currentIndex--;
+      updateCarousel();
+    });
+    nextBtn.addEventListener('click', () => {
+      currentIndex++;
+      updateCarousel();
     });
   }
 
-  // ——— Modal wiring ———
-  // Carousel images
-  document.querySelectorAll(".slide img").forEach((img, idx) => {
-    img.addEventListener("click", () => {
-      openModal(`imageModal${idx + 1}`);
-    });
-  });
+  // Recompute on resize (so visibleCount can switch between 3 and 1)
+  window.addEventListener('resize', updateCarousel);
+
+  // Initial positioning
+  updateCarousel();
+});
+
 
   // Portfolio grid images
 document.querySelectorAll(".portfolio-grid .grid-item").forEach((item, idx) => {
@@ -75,7 +103,7 @@ document.querySelectorAll(".portfolio-grid .grid-item").forEach((item, idx) => {
       event.target.style.display = "none";
     }
   });
-});
+
 
 // Show a given modal (hides any others first)
 function openModal(modalId) {
